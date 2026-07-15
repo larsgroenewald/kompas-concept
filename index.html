@@ -59,7 +59,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: -0.04em;
     color: #060B36;
     text-decoration: none;
     padding: 4px 0;
@@ -704,7 +704,7 @@
     height: 48px;
     box-sizing: border-box;
     background-color: #FFFFFF;
-    color: #3234AC;
+    color: #2C3786;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -1077,6 +1077,285 @@
 
   .news-card.cta::after {
     content: none;
+  }
+
+  /* ===== Footer ===== */
+
+  .footer-tag-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .footer-tag {
+    height: 48px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #2C3786;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    padding: 19px 8px 19px 19px;
+    border-top-left-radius: 8px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-tag-corner {
+    display: block;
+    height: 48px;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .site-footer {
+    position: relative;
+    width: calc(100% - 80px);
+    margin: 0 40px 0;
+    background-color: #F4F2EF;
+    border-radius: 8px;
+    padding: 120px 80px 80px;
+    box-sizing: border-box;
+  }
+
+  .footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-links-group {
+    display: flex;
+    gap: 80px;
+  }
+
+  .footer-brand {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    margin-bottom: 24px;
+  }
+
+  .footer-logo svg {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+
+  .footer-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #060B36;
+    max-width: 380px;
+    margin-bottom: 24px;
+  }
+
+  .footer-address {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-address__title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+    color: #060B36;
+    margin-bottom: 4px;
+  }
+
+  /* Contactgegevens: zelfde stijl als de overige footer-links */
+  .footer-contact-btn {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #060B36;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .footer-contact-btn:hover {
+    color: #6568EF;
+  }
+
+  .footer-col__title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    color: #060B36;
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #060B36;
+    text-decoration: none;
+    transition: color 0.15s ease;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-link:hover {
+    color: #6568EF;
+  }
+
+  /* LinkedIn-knop: dezelfde knop-component als in de hero (.btn-primary-dark-group),
+     alleen de kleur aangepast naar LinkedIn-blauw i.p.v. paars */
+  .btn-primary-dark-group.linkedin .btn-primary-dark {
+    border-color: #0C64C5;
+    color: #0C64C5;
+  }
+
+  .btn-primary-dark-group.linkedin:hover .btn-primary-dark {
+    border-color: #0C64C5;
+  }
+
+  .btn-primary-dark-group.linkedin:hover .btn-primary-dark::before {
+    background-color: #0C64C5;
+  }
+
+  .btn-primary-dark-group.linkedin:hover .btn-primary-dark__label {
+    color: #FFFFFF;
+  }
+
+  .btn-primary-dark-group.linkedin .btn-icon-dark {
+    background: #0C64C5;
+  }
+
+  .btn-primary-dark-group.linkedin:hover .btn-icon-dark {
+    background-color: #094F9C;
+  }
+
+  .btn-primary-dark-group.linkedin .btn-primary-dark,
+  .btn-primary-dark-group.linkedin .btn-icon-dark {
+    text-decoration: none;
+  }
+
+  .btn-primary-dark-group.linkedin .btn-icon-dark svg,
+  .btn-primary-dark-group.linkedin:hover .btn-icon-dark svg {
+    transform: rotate(0deg);
+  }
+
+  /* Voorkomt dat de browser-standaardkleur voor bezochte/actieve links (paars) doorschemert */
+  .btn-primary-dark-group.linkedin .btn-primary-dark:link,
+  .btn-primary-dark-group.linkedin .btn-primary-dark:visited,
+  .btn-primary-dark-group.linkedin .btn-primary-dark:active {
+    color: #0C64C5;
+    border-color: #0C64C5;
+  }
+
+  .btn-primary-dark-group.linkedin:hover .btn-primary-dark:active {
+    border-color: #0C64C5;
+  }
+
+  .btn-primary-dark-group.linkedin:hover .btn-primary-dark__label,
+  .btn-primary-dark-group.linkedin:active .btn-primary-dark__label {
+    color: #FFFFFF;
+  }
+
+  .btn-primary-dark-group.linkedin .btn-icon-dark:link,
+  .btn-primary-dark-group.linkedin .btn-icon-dark:visited,
+  .btn-primary-dark-group.linkedin .btn-icon-dark:active {
+    background-color: #0C64C5;
+  }
+
+  .footer-bottom {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 40px 120px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .footer-bottom__copyright {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #060B36;
+  }
+
+  .footer-bottom__links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .footer-bottom__links a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    color: #060B36;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .footer-bottom__links a:hover {
+    color: #6568EF;
+  }
+
+  @media (max-width: 1120px) {
+    .site-footer {
+      padding: 100px 40px 60px;
+    }
+    .footer-grid {
+      flex-direction: column;
+      gap: 48px;
+    }
+    .footer-links-group {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .site-footer {
+      padding: 80px 24px 48px;
+    }
+    .footer-links-group {
+      flex-direction: column;
+      gap: 32px;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
   }
 
 </style>
@@ -1558,6 +1837,156 @@
     </a>
   </div>
 </section>
+
+<footer class="site-footer" aria-label="Footer">
+  <div class="footer-tag-group">
+    <div class="footer-tag">kompaspublishing.nl</div>
+    <svg class="footer-tag-corner" width="33" height="48" viewBox="0 0 33 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g clip-path="url(#clip0_footer_corner)">
+        <path d="M8.25149 43.2L33 0H0V48C3.40538 48 6.5488 46.17 8.25149 43.2Z" fill="#FFFFFF"/>
+      </g>
+      <defs>
+        <clipPath id="clip0_footer_corner">
+          <rect width="33" height="48" fill="white"/>
+        </clipPath>
+      </defs>
+    </svg>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg id="Laag_1" style="height:24px;width:auto;display:block;" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 156.87 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-3 {
+        fill: #191832;
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="cls-1" d="M149.57,1.26s.09.08.12.14l5.97,10.34c.09.16.09.37,0,.53l-5.97,10.34c-.03.06-.08.11-.14.15V1.26ZM137.04,22.79l4.55-7.89-10.79-2.88c-.16-.03-.04-.06,0-.1l18.61-10.76c.13-.07.11-.01.08.03l-7.91,13.7,7.88,7.9c-.07.04-.15.06-.24.06h-11.92c-.1,0-.2-.03-.28-.08M137.26,0c-.58.01-1.11.33-1.4.83l-5.97,10.34c-.3.51-.3,1.15,0,1.66l5.96,10.32c.3.52.87.85,1.47.85h11.92c.59,0,1.14-.32,1.44-.83l5.97-10.34c.15-.25.22-.53.22-.82v-.02c0-.28-.08-.57-.22-.82l-5.97-10.34c-.15-.26-.36-.46-.61-.61-.24-.14-.51-.22-.79-.22h-12.01Z"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" x="127.17" y="-2.5" width="32.2" height="29"/>
+    </clipPath>
+  </defs>
+  <g class="cls-4">
+    <g class="cls-2">
+      <image width="68" height="62" transform="translate(127.03 -2.88) scale(.48)" xlink:href="data:image/png;base64,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"/>
+    </g>
+  </g>
+  <g>
+    <g>
+      <polygon class="cls-3" points="0 3.09 0 20.97 3.17 20.97 3.17 11.59 3.17 3.09 0 3.09"/>
+      <polygon class="cls-3" points="7.36 11.51 16.75 3.09 12.28 3.09 3.17 11.59 13.44 20.97 18 20.97 7.36 11.51"/>
+    </g>
+    <path class="cls-3" d="M28.29,21.3c-2.12,0-3.96-.38-5.53-1.13-1.57-.75-2.79-1.82-3.64-3.2-.86-1.38-1.28-3.03-1.28-4.94s.43-3.56,1.28-4.95c.86-1.39,2.07-2.46,3.64-3.2,1.57-.74,3.42-1.12,5.53-1.12s4.01.37,5.56,1.12c1.55.75,2.76,1.81,3.63,3.2.86,1.39,1.3,3.04,1.3,4.95s-.43,3.56-1.3,4.94c-.87,1.38-2.07,2.45-3.63,3.2-1.56.75-3.41,1.13-5.56,1.13M28.29,18.49c1.4,0,2.64-.23,3.71-.7,1.08-.47,1.92-1.18,2.54-2.14.62-.96.93-2.16.93-3.62s-.31-2.63-.93-3.59c-.62-.96-1.46-1.67-2.54-2.15-1.08-.48-2.31-.72-3.71-.72s-2.62.24-3.71.72c-1.1.48-1.96,1.2-2.58,2.15-.63.96-.94,2.15-.94,3.59s.31,2.66.94,3.62c.63.96,1.49,1.67,2.58,2.14,1.09.47,2.33.7,3.71.7"/>
+    <polygon class="cls-3" points="63.2 3.09 54.36 18.07 45.54 3.09 42.36 3.09 42.36 20.97 45.54 20.97 45.54 9.07 52.63 20.97 56.11 20.97 63.2 9.04 63.2 20.97 66.38 20.97 66.38 3.09 63.2 3.09"/>
+    <path class="cls-3" d="M86.72,6.45c-.35-.75-.83-1.38-1.45-1.88-.62-.5-1.33-.87-2.15-1.12-.82-.25-1.7-.37-2.64-.37h-9.85v17.88h3.17v-5.99h6.68c.94,0,1.82-.11,2.64-.33.82-.22,1.54-.57,2.15-1.05.62-.48,1.1-1.09,1.45-1.84.35-.74.52-1.62.52-2.64s-.18-1.92-.52-2.68M83.13,11.49c-.61.58-1.42.87-2.43.87h-6.9v-6.49h6.9c1.01,0,1.82.29,2.43.86.61.57.91,1.37.91,2.4s-.3,1.78-.91,2.36"/>
+    <path class="cls-3" d="M102.61,20.97h3.48l-7.95-17.88h-3.42l-7.87,17.88h3.42l1.77-4.17h8.8l1.77,4.17ZM93.2,14.07l3.23-7.62,3.24,7.62h-6.47Z"/>
+    <path class="cls-3" d="M107.39,15.01h3.15c.05.68.32,1.29.8,1.84.48.54,1.11.97,1.89,1.27.78.3,1.68.46,2.69.46.9,0,1.65-.11,2.24-.33.59-.22,1.03-.52,1.32-.91.29-.39.44-.86.44-1.41s-.17-.95-.51-1.24c-.34-.29-.87-.54-1.59-.74-.72-.2-1.63-.4-2.73-.61-.92-.18-1.8-.41-2.65-.69-.85-.28-1.61-.63-2.28-1.05-.67-.42-1.2-.94-1.59-1.55-.39-.61-.58-1.33-.58-2.18,0-.98.27-1.85.81-2.62.54-.77,1.35-1.38,2.43-1.82,1.08-.44,2.4-.66,3.96-.66,2.36,0,4.15.54,5.4,1.61,1.24,1.08,1.84,2.54,1.81,4.4h-3.04c-.07-1.16-.51-1.99-1.3-2.5-.79-.51-1.79-.76-3.01-.76-1.1,0-2.02.19-2.76.57-.74.38-1.1,1-1.1,1.86,0,.35.09.66.26.92.18.27.47.51.88.72.41.21.97.41,1.68.61.71.19,1.59.39,2.64.59.88.17,1.72.37,2.5.62.78.25,1.46.57,2.04.97.58.4,1.04.9,1.37,1.5.33.61.5,1.35.5,2.24,0,1.01-.26,1.91-.77,2.69-.52.78-1.31,1.4-2.37,1.85-1.07.45-2.45.68-4.14.68-1.29,0-2.41-.15-3.35-.46-.95-.3-1.76-.7-2.43-1.19-.67-.49-1.21-1.02-1.61-1.59-.41-.57-.69-1.13-.84-1.67-.16-.54-.21-1.02-.15-1.42"/>
+  </g>
+</svg>
+      </div>
+      <p class="footer-text">Kompas Publishing B.V. beheert een divers en groeiend portfolio. Onze merken richten zich op vier pijlers binnen online media publishing: senioren, jonge gezinnen, onderwijs en shopping.</p>
+      <div class="footer-address">
+        <p class="footer-address__title">Kompas Publishing B.V.</p>
+        <a href="https://maps.google.com/?q=Tempeliersstraat+20A+2012+ED+Haarlem" class="footer-contact-btn">Tempeliersstraat 20A, 2012 ED Haarlem</a>
+        <a href="mailto:info@kompaspublishing.nl" class="footer-contact-btn">info@kompaspublishing.nl</a>
+      </div>
+      <div class="btn-primary-dark-group linkedin" style="margin-top:0;">
+        <a href="#" class="btn-primary-dark" aria-label="Volg Kompas Publishing op LinkedIn">
+          <span class="btn-primary-dark__label">LinkedIn</span>
+        </a>
+        <a href="#" class="btn-icon-dark" aria-label="Volg Kompas Publishing op LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_linkedin_footer)">
+              <path d="M14.8156 0H1.18125C0.528125 0 0 0.515625 0 1.15313V14.8438C0 15.4813 0.528125 16 1.18125 16H14.8156C15.4688 16 16 15.4813 16 14.8469V1.15313C16 0.515625 15.4688 0 14.8156 0ZM4.74687 13.6344H2.37188V5.99687H4.74687V13.6344ZM3.55938 4.95625C2.79688 4.95625 2.18125 4.34062 2.18125 3.58125C2.18125 2.82188 2.79688 2.20625 3.55938 2.20625C4.31875 2.20625 4.93437 2.82188 4.93437 3.58125C4.93437 4.3375 4.31875 4.95625 3.55938 4.95625ZM13.6344 13.6344H11.2625V9.92188C11.2625 9.0375 11.2469 7.89687 10.0281 7.89687C8.79375 7.89687 8.60625 8.8625 8.60625 9.85938V13.6344H6.2375V5.99687H8.5125V7.04063H8.54375C8.85938 6.44063 9.63438 5.80625 10.7875 5.80625C13.1906 5.80625 13.6344 7.3875 13.6344 9.44375V13.6344Z" fill="white"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_linkedin_footer">
+                <rect width="16" height="16" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="footer-links-group">
+    <nav class="footer-col" aria-label="Direct naar">
+      <p class="footer-col__title">Direct naar</p>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Home</a>
+        <a href="#" class="footer-link">Onze merken</a>
+        <a href="#" class="footer-link">Ons aanbod</a>
+        <a href="#" class="footer-link">Over ons</a>
+        <a href="#" class="footer-link">Inzichten</a>
+        <a href="#" class="footer-link">Carrières<span class="menu-indicator" style="width:1.375rem;height:1.375rem;font-size:11px;">8</span></a>
+        <a href="#" class="footer-link">Contact</a>
+        <a href="#" class="footer-link">Adverteren</a>
+      </div>
+    </nav>
+
+    <nav class="footer-col" aria-label="Onze merken">
+      <p class="footer-col__title">Onze merken</p>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Baby Op Komst</a>
+        <a href="#" class="footer-link">Black Friday Deals</a>
+        <a href="#" class="footer-link">Datumprikker</a>
+        <a href="#" class="footer-link">FEM FEM</a>
+        <a href="#" class="footer-link">Fluitend Leren</a>
+        <a href="#" class="footer-link">Freshhh</a>
+        <a href="#" class="footer-link">Gewoonvoorhem</a>
+        <a href="#" class="footer-link">Girlscene</a>
+        <a href="#" class="footer-link">Kek Mama</a>
+        <a href="#" class="footer-link">MAN MAN</a>
+        <a href="#" class="footer-link">ONS</a>
+        <a href="#" class="footer-link">Pure Luxe</a>
+        <a href="#" class="footer-link">SchoolBANK</a>
+        <a href="#" class="footer-link">Startpagina</a>
+        <a href="#" class="footer-link">VIVA</a>
+        <a href="#" class="footer-link">Weer.nl</a>
+      </div>
+    </nav>
+
+    <nav class="footer-col" aria-label="Ons aanbod">
+      <p class="footer-col__title">Ons aanbod</p>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Branded Content Article</a>
+        <a href="#" class="footer-link">Branded Content Video</a>
+        <a href="#" class="footer-link">Display Bannering</a>
+        <a href="#" class="footer-link">Social Advertising</a>
+        <a href="#" class="footer-link">Aanbod</a>
+        <a href="#" class="footer-link">Aanbod</a>
+        <a href="#" class="footer-link">Aanbod</a>
+        <a href="#" class="footer-link">Aanbod</a>
+      </div>
+    </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <p class="footer-bottom__copyright">Kompas Publishing &copy; 2026</p>
+  <nav class="footer-bottom__links" aria-label="Juridische links">
+    <a href="#">Disclaimer</a>
+    <a href="#">Privacy</a>
+    <a href="#">Cookies</a>
+  </nav>
+</div>
 
 <script>
   const burger = document.getElementById('menuBurger');
