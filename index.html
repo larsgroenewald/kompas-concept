@@ -2,12 +2,25 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<title>Kompas Concept - 15 juli</title>
+<title>Kompas Concept - 15 juli v2/title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    /* Vaste verticale afstand tussen secties: exact 120px op desktop,
+       schaalt naar 60px op schermen kleiner dan 768px */
+    --section-spacing: 120px;
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      --section-spacing: 60px;
+    }
+  }
+
   body {
     font-family: 'DM Sans', sans-serif;
     background: #FFFFFF;
@@ -458,7 +471,7 @@
 
   .cards-section {
     width: calc(100% - 80px);
-    margin: 24px 40px 40px;
+    margin: 24px 40px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
@@ -549,7 +562,7 @@
 
   .brands-section {
     width: calc(100% - 80px);
-    margin: 0 40px 40px;
+    margin: var(--section-spacing) 40px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
@@ -659,7 +672,7 @@
 
   .about-section {
     width: calc(100% - 80px);
-    margin: 0 40px 40px;
+    margin: var(--section-spacing) 40px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -814,7 +827,7 @@
 
   .stats-section {
     width: calc(100% - 80px);
-    margin: 0 40px 40px;
+    margin: 20px 40px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
@@ -874,7 +887,7 @@
 
   .news-section {
     width: calc(100% - 80px);
-    margin: 0 40px 40px;
+    margin: var(--section-spacing) 40px 40px;
   }
 
   .news-heading {
